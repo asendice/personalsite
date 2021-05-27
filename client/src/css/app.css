@@ -30,7 +30,7 @@
 }
 
 .bkg {
-  background-image: url(/src/components/img/bkg.png);
+  background-image: url(../img/bkg.png);
   background-size: 100% 100%;
   width: 100%;
   position: absolute;
@@ -38,8 +38,17 @@
   z-index: 2;
 }
 
+.branch {
+  background-image: url(../img/branch.png);
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-size: 100% 100%;
+  z-index: 3;
+}
+
 .skySun {
-  background-image: url(/src/components/img/skySun.png);
+  background-image: url(../img/skySun.png);
   position: absolute;
   height: 100%;
   width: 100%;
@@ -48,7 +57,7 @@
 }
 
 .second {
-  background-image: url(/src/components/img/second.png);
+  background-image: url(../img/second.png);
   position: absolute;
   height: 100%;
   width: 100%;
@@ -56,7 +65,7 @@
   z-index: 2;
 }
 .third {
-  background-image: url(/src/components/img/third.png);
+  background-image: url(../img/third.png);
   position: absolute;
   height: 100%;
   width: 100%;
@@ -65,7 +74,7 @@
 }
 
 .fourth {
-  background-image: url(/src/components/img/fourth.png);
+  background-image: url(../img/fourth.png);
   position: absolute;
   height: 100%;
   width: 100%;
@@ -73,7 +82,7 @@
   z-index: 2;
 }
 .fifth {
-  background-image: url(/src/components/img/fifth.png);
+  background-image: url(../img/fifth.png);
   position: absolute;
   height: 100%;
   width: 100%;
@@ -81,7 +90,7 @@
   z-index: 2;
 }
 .sixth {
-  background-image: url(/src/components/img/sixth.png);
+  background-image: url(../img/sixth.png);
   position: absolute;
   height: 100%;
   width: 100%;
@@ -94,10 +103,13 @@
   display: flex;
   justify-content: space-around;
   text-align: center;
+}
 
+.project-container {
+  margin-left: auto !important;
+  margin-right: auto !important;
 }
 
 div h1 {
   color: #fff;
-
 }

@@ -4,8 +4,6 @@ import Projects from "./Projects";
 const App = () => {
   const [offSetY, setOffSetY] = useState(0);
 
-  console.log(offSetY);
-
   const handleScroll = () => {
     setOffSetY(window.pageYOffset);
   };

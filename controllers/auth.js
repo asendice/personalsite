@@ -1,7 +1,7 @@
 const Project = require("../models/Project");
 
 exports.getProjects = (req, res) => {
-  Projects.find().then((proj) => {
+  Project.find().then((proj) => {
     if (!proj) {
       return res.status(404).json({
         errors: [{ user: "Projects cannot be found" }],
