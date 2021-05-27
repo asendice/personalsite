@@ -1,0 +1,103 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  overscroll-behavior-y: none !important;
+  overscroll-behavior-x: none !important;
+}
+
+.title {
+  display: block;
+  margin-left: auto;
+  margin-right: 10%;
+  margin-top: 350px;
+  width: 500px;
+}
+
+.section-one {
+  padding: 0;
+  margin: 0;
+  height: 100vh;
+  background: black;
+}
+
+.section-two {
+  height: 100vh;
+  width: 100%;
+  background-color: #00162b;
+  position: absolute;
+  z-index: 2;
+}
+
+.bkg {
+  background-image: url(/src/components/img/bkg.png);
+  background-size: 100% 100%;
+  width: 100%;
+  position: absolute;
+  height: 100%;
+  z-index: 2;
+}
+
+.skySun {
+  background-image: url(/src/components/img/skySun.png);
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-size: 100% 100%;
+  z-index: 2;
+}
+
+.second {
+  background-image: url(/src/components/img/second.png);
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-size: 100% 100%;
+  z-index: 2;
+}
+.third {
+  background-image: url(/src/components/img/third.png);
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-size: 100% 100%;
+  z-index: 2;
+}
+
+.fourth {
+  background-image: url(/src/components/img/fourth.png);
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-size: 100% 100%;
+  z-index: 2;
+}
+.fifth {
+  background-image: url(/src/components/img/fifth.png);
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-size: 100% 100%;
+  z-index: 2;
+}
+.sixth {
+  background-image: url(/src/components/img/sixth.png);
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-size: 100% 100%;
+  z-index: 2;
+}
+
+.project-header-container {
+  margin-top: 150px;
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+
+}
+
+div h1 {
+  color: #fff;
+
+}
