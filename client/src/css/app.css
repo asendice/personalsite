@@ -26,12 +26,24 @@
   color: pink !important;
 }
 
+.card-buttons {
+  display: flex !important;
+  justify-content: space-evenly !important;
+  align-items: center;
+}
+
+.title-container {
+  z-index: -1;
+}
+
 .section-two {
   height: 100vh;
   width: 100%;
-  background-color: #00162b;
-  position: absolute;
-  z-index: 2;
+}
+.section-three {
+  height: 100vh;
+  width: 100%;
+  background-color: black;
 }
 
 .bird-coral {
@@ -41,7 +53,21 @@
   width: 10px;
   position: absolute;
   z-index: 2;
-  border: 2px red solid; 
+}
+
+.projects {
+  width: 100%;
+  height: 100vh;
+  background-color: #00162b;
+  position: absolute;
+  z-index: 2 !important;
+}
+.info {
+  width: 100%;
+  height: 100vh;
+  background-color: black;
+  position: absolute;
+  z-index: 2 !important;
 }
 
 .bkg {
@@ -127,4 +153,5 @@
 
 div h1 {
   color: #fff;
+  text-decoration: underline !important;
 }

@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Title from "./Title";
 import Projects from "./Projects";
+import Info from "./Info";
 
 const App = () => {
   const [offSetY, setOffSetY] = useState(0);
@@ -36,21 +37,28 @@ const App = () => {
         <div
           className="fourth"
           style={{ transform: `translateY(${offSetY * 0.5}px)` }}
-        >
-          <Title />
-        </div>
+        ></div>
         <div
           className="fifth"
           style={{ transform: `translateY(${offSetY * 0.3}px)` }}
         ></div>
-        <div
-          className="sixth"
-          // style={{ transform: `translateY(${offSetY * 0.05}px)` }}
-        ></div>
+
+        <div className="sixth">
+          <div
+            className="title-container"
+            style={{ transform: `translateY(${offSetY * 0.3}px)` }}
+          >
+            <Title />
+          </div>
+        </div>
       </div>
 
       <div className="section-two">
-        <Projects offSetY={offSetY}/>
+        <Projects offSetY={offSetY} />
+      </div>
+
+      <div className="section-three">
+        <Info />
       </div>
     </>
   );

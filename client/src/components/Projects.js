@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Table, Segment, Header, Icon, Button } from "semantic-ui-react";
+import { Table, Segment, Image, Icon, Button, Card } from "semantic-ui-react";
 import birdMelon from "../img/birdMelon.png";
 import branch from "../img/branch.png";
 import backendApi from "../apis/backendApi";
@@ -29,17 +29,17 @@ const Projects = ({ offSetY }) => {
     getProjects();
   }, []);
 
-  const renderProjects = () => {
+  const renderCards = () => {
     return proj.map((prj) => {
       return (
-        <Table.Row key={prj.name}>
-          <Table.Cell>
-            <Header as="h2">{prj.name}</Header>
-          </Table.Cell>
-          <Table.Cell>
-            <Button>Description</Button>
-          </Table.Cell>
-          <Table.Cell>
+        <Card>
+          <Image src={prj.imgOne} />
+          <Card.Content>
+            <Card.Header>{prj.name}</Card.Header>
+            <Card.Description>{prj.description}</Card.Description>
+          </Card.Content>
+          <Card.Content extra className="card-buttons">
+            <Button>More Info</Button>
             <Button
               color="black"
               href={prj.gitHub}
@@ -49,8 +49,6 @@ const Projects = ({ offSetY }) => {
               <Icon name="github" />
               GitHub
             </Button>
-          </Table.Cell>
-          <Table.Cell>
             <Button
               color="blue"
               href={prj.live}
@@ -60,26 +58,28 @@ const Projects = ({ offSetY }) => {
               <Icon name="rocket" />
               Live Demo
             </Button>
-          </Table.Cell>
-        </Table.Row>
+          </Card.Content>
+        </Card>
       );
     });
   };
 
   return (
-    <>
+    <div id="projects" className="projects">
       <div className="project-header-container">
-        <h1 style={{ textDecoration: "underline" }}> PROJECTS </h1>
+        <h1> PROJECTS </h1>
       </div>
       <Segment basic compact className="project-container">
-        <Table color="grey" size="large" textAlign="center" unstackable>
-          <Table.Body>{renderProjects()}</Table.Body>
-        </Table>
+        <Card.Group>{renderCards()}</Card.Group>
       </Segment>
       {/* <img className="branch" src={branch} style={{ transform: `translateY(${offSetY * 0.1}px)` }}></img> */}
 
-      <img className="birdMelon" src={birdMelon} style={{ transform: `translateX(${offSetY * 0.7}px)` }} ></img>
-    </>
+      <img
+        className="birdMelon"
+        src={birdMelon}
+        style={{ transform: `translateX(${offSetY * 0.7}px)` }}
+      ></img>
+    </div>
   );
 };
 
