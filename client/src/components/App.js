@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import Title from "./Title";
 import Projects from "./Projects";
 
 const App = () => {
@@ -21,7 +22,9 @@ const App = () => {
         <div
           className="skySun"
           style={{ transform: `translateY(${offSetY * 0.9}px)` }}
-        ></div>
+        >
+          {" "}
+        </div>
         <div
           className="second"
           style={{ transform: `translateY(${offSetY * 0.8}px)` }}
@@ -29,28 +32,25 @@ const App = () => {
         <div
           className="third"
           style={{ transform: `translateY(${offSetY * 0.7}px)` }}
-        >
-          <div className="title">
-            <h1>Dylan Travis</h1>
-            <h1>front-end web developer</h1>
-          </div>
-        </div>
+        ></div>
         <div
           className="fourth"
           style={{ transform: `translateY(${offSetY * 0.5}px)` }}
-        ></div>
+        >
+          <Title />
+        </div>
         <div
           className="fifth"
           style={{ transform: `translateY(${offSetY * 0.3}px)` }}
         ></div>
         <div
           className="sixth"
-          style={{ transform: `translateY(${offSetY * 0.05}px)` }}
+          // style={{ transform: `translateY(${offSetY * 0.05}px)` }}
         ></div>
       </div>
 
       <div className="section-two">
-        <Projects />
+        <Projects offSetY={offSetY}/>
       </div>
     </>
   );

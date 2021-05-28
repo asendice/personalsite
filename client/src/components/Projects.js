@@ -1,8 +1,10 @@
 import React, { useEffect, useState } from "react";
 import { Table, Segment, Header, Icon, Button } from "semantic-ui-react";
+import birdMelon from "../img/birdMelon.png";
+import branch from "../img/branch.png";
 import backendApi from "../apis/backendApi";
 
-const Projects = () => {
+const Projects = ({ offSetY }) => {
   const [proj, setProj] = useState([]);
 
   const getProjects = async () => {
@@ -30,11 +32,9 @@ const Projects = () => {
   const renderProjects = () => {
     return proj.map((prj) => {
       return (
-        <Table.Row  key={prj.name}>
+        <Table.Row key={prj.name}>
           <Table.Cell>
-            <Header as="h2" >
-              {prj.name}
-            </Header>
+            <Header as="h2">{prj.name}</Header>
           </Table.Cell>
           <Table.Cell>
             <Button>Description</Button>
@@ -71,13 +71,14 @@ const Projects = () => {
       <div className="project-header-container">
         <h1 style={{ textDecoration: "underline" }}> PROJECTS </h1>
       </div>
-      <div className="branch"></div>
-
       <Segment basic compact className="project-container">
-        <Table color="grey" size="large" textAlign="center">
+        <Table color="grey" size="large" textAlign="center" unstackable>
           <Table.Body>{renderProjects()}</Table.Body>
         </Table>
       </Segment>
+      {/* <img className="branch" src={branch} style={{ transform: `translateY(${offSetY * 0.1}px)` }}></img> */}
+
+      <img className="birdMelon" src={birdMelon} style={{ transform: `translateX(${offSetY * 0.7}px)` }} ></img>
     </>
   );
 };
