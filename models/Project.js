@@ -11,17 +11,8 @@ const projectSchema = new Schema(
       type: String,
       required: true,
     },
-    imgOne: {
-      type: String,
-      required: true,
-    },
-    imgTwo: {
-      type: String,
-      required: true,
-    },
-    imgThree: {
-      type: String,
-      required: true,
+    images: {
+      type: Array,
     },
     skills: {
       type: Array,
@@ -29,12 +20,12 @@ const projectSchema = new Schema(
     },
     gitHub: {
       type: String,
-      required: true
+      required: true,
     },
     live: {
       type: String,
-      required: true
-    }
+      required: true,
+    },
   },
   {
     timestamps: true,

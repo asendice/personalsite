@@ -32,6 +32,9 @@
   align-items: center;
 }
 
+.card-btn {
+  width: 145px !important;
+}
 .title-container {
   z-index: -1;
 }
@@ -39,35 +42,26 @@
 .section-two {
   height: 100vh;
   width: 100%;
-}
-.section-three {
-  height: 100vh;
-  width: 100%;
-  background-color: black;
-}
-
-.bird-coral {
-  background-image: url(../img/birdCoral.png);
-  background-size: 100% 100%;
-  height: 100%;
-  width: 10px;
+  background-color: #00162b !important;
   position: absolute;
-  z-index: 2;
+  z-index: 3 !important;
 }
 
 .projects {
   width: 100%;
-  height: 100vh;
+  min-height: 100vh;
   background-color: #00162b;
-  position: absolute;
-  z-index: 2 !important;
+  padding: 0 !important;
+  margin-bottom: 0px !important;
+  margin-top: 0px !important;
+  border: #00162b solid 1px;
 }
 .info {
+  margin-top: 0px !important;
   width: 100%;
   height: 100vh;
   background-color: black;
-  position: absolute;
-  z-index: 2 !important;
+  border: 1px solid black;
 }
 
 .bkg {
@@ -149,6 +143,28 @@
 .project-container {
   margin-left: auto !important;
   margin-right: auto !important;
+}
+
+.project-img {
+  height: 174px !important;
+}
+
+.right-arrow-btn {
+  margin-top: 10px !important;
+  float: right !important;
+}
+.left-arrow-btn {
+  margin-top: 10px !important;
+  float: left !important;
+}
+
+.carousel-index {
+  margin-top: 10px !important;
+}
+
+.carousel-image {
+  width: 900px !important;
+  height: 450px !important;
 }
 
 div h1 {

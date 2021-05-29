@@ -55,11 +55,10 @@ const App = () => {
 
       <div className="section-two">
         <Projects offSetY={offSetY} />
+        <Info />
+
       </div>
 
-      <div className="section-three">
-        <Info />
-      </div>
     </>
   );
 };
