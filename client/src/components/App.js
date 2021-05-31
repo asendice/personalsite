@@ -18,7 +18,7 @@ const App = () => {
 
   return (
     <>
-      <div className="section-one">
+      <div id="main" className="section-one">
         <div className="bkg"></div>
         <div
           className="skySun"

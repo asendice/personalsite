@@ -1,16 +1,12 @@
 import React from "react";
+import SectionHeader from "./SectionHeader";
 
 const Info = () => {
-
-
-  return( 
+  return (
     <div id="info" className="info">
-      <div className="project-header-container">
-        <h1> Info </h1>
-      </div>
+      <SectionHeader title="info" />
     </div>
-  )
-
-}
+  );
+};
 
 export default Info;
