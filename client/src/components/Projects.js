@@ -1,13 +1,16 @@
 import React, { useEffect, useState } from "react";
 import {
   Modal,
+  Header,
   Segment,
   Image,
-  Icon,
   Button,
   Card,
   Label,
+  Icon,
 } from "semantic-ui-react";
+import SectionHeader from "./SectionHeader";
+import treeLine from "../img/treeLine.png";
 import birdMelon from "../img/birdMelon.png";
 import birdNaplesYellow from "../img/birdNaplesYellow.png";
 import branch from "../img/branch.png";
@@ -47,6 +50,13 @@ const Projects = ({ offSetY }) => {
     setOpen(true);
   };
 
+  console.log(selectedProj.skills);
+
+  const renderSkills = () => {
+    return selectedProj.skills.map((skill) => {
+      return <Label>{skill} </Label>;
+    });
+  };
 
   const renderModal = () => {
     if (selectedProj.images) {
@@ -61,6 +71,9 @@ const Projects = ({ offSetY }) => {
           <Modal.Header>{selectedProj.name}</Modal.Header>
           <Modal.Content>
             <Segment basic>{selectedProj.description}</Segment>
+            <Segment textAlign="center" basic>
+              {renderSkills()}
+            </Segment>
             <Segment textAlign="center" basic className="carousel">
               <Image
                 className="carousel-image animate one fadeInRight"
@@ -127,7 +140,7 @@ const Projects = ({ offSetY }) => {
   const renderCards = () => {
     return proj.map((prj) => {
       return (
-        <Card  onClick={() => onCardClick(prj)}>
+        <Card onClick={() => onCardClick(prj)}>
           <Image className="project-img" src={prj.images[0]} />
           <Card.Content>
             <Card.Header>{prj.name}</Card.Header>
@@ -162,10 +175,10 @@ const Projects = ({ offSetY }) => {
 
   return (
     <div id="projects" className="projects">
-      <div className="project-header-container">
+      {/* <div className="project-header-container">
         <h1> PROJECTS </h1>
-      </div>
-
+      </div> */}
+      <SectionHeader title="Projects"/>
       <Segment basic compact className="project-container">
         <Card.Group centered>{renderCards()}</Card.Group>
       </Segment>
@@ -181,6 +194,7 @@ const Projects = ({ offSetY }) => {
         style={{ transform: `translateX(${offSetY * 0.7}px)` }}
       ></img> */}
       {renderModal()}
+      {/* <img style={{marginTop: "auto", position: "absolute"}} src={treeLine}></img> */}
     </div>
   );
 };

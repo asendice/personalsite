@@ -8,7 +8,6 @@ const Title = () => {
       basic
       textAlign="center"
       className="title"
-      style={{ zIndex: "10" }}
     >
       <Header style={{ color: "black" }} as="h1">
         Dylan Travis front-end web developer

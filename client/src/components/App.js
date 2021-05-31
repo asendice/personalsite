@@ -44,10 +44,7 @@ const App = () => {
         ></div>
 
         <div className="sixth">
-          <div
-            className="title-container"
-            style={{ transform: `translateY(${offSetY * 0.1}px)` }}
-          >
+          <div style={{ transform: `translateY(${offSetY * 0.3}px)` }}>
             <Title />
           </div>
         </div>
@@ -56,9 +53,7 @@ const App = () => {
       <div className="section-two">
         <Projects offSetY={offSetY} />
         <Info />
-
       </div>
-
     </>
   );
 };

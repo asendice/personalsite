@@ -11,6 +11,7 @@
   box-shadow: none !important;
   margin-top: 380px !important;
   color: #fff;
+  z-index: inherit;
 }
 
 .section-one {
@@ -23,11 +24,10 @@
 .title-buttons {
   width: 107px !important;
   background: #00162b !important;
-  color: #fff !important;
+  color: coral !important;
 }
 
 .title-buttons:hover {
-  color: pink !important;
   opacity: 0.9 !important;
 }
 
@@ -40,8 +40,9 @@
 .card-btn {
   width: 145px !important;
 }
+
 .title-container {
-  z-index: -1;
+  z-index: -1 !important;
 }
 
 .section-two {
@@ -51,6 +52,19 @@
   background-color: #00162b !important;
   position: absolute;
   z-index: 2 !important;
+}
+
+.arrows {
+  margin-left: 50px !important;
+  margin-right: 50px !important;
+  cursor: pointer !important;
+  color: coral !important;
+  opacity: 0.4 !important;
+  transition: opacity 0.5s ease-in !important
+}
+
+.arrows:hover {
+  opacity: 0.9 !important;
 }
 
 .projects {
@@ -139,12 +153,11 @@
   z-index: 2;
 }
 
-
 .project-header-container {
-  margin-top: 150px;
-  display: flex;
-  justify-content: space-around;
-  text-align: center;
+  margin-top: 150px !important;
+  display: flex !important;
+  justify-content: space-evenly !important;
+  text-align: center !important;
 }
 
 .project-container {
@@ -176,5 +189,5 @@
 
 div h1 {
   color: #fff;
-  text-decoration: underline !important;
+  /* text-decoration: underline !important; */
 }
