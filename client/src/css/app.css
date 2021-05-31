@@ -23,7 +23,12 @@
 .title-buttons {
   width: 107px !important;
   background: #00162b !important;
+  color: #fff !important;
+}
+
+.title-buttons:hover {
   color: pink !important;
+  opacity: 0.9 !important;
 }
 
 .card-buttons {
@@ -42,9 +47,10 @@
 .section-two {
   height: 100vh;
   width: 100%;
+  /* margin-top: 20px !important; */
   background-color: #00162b !important;
   position: absolute;
-  z-index: 3 !important;
+  z-index: 2 !important;
 }
 
 .projects {
@@ -132,6 +138,7 @@
   background-size: 100% 100%;
   z-index: 2;
 }
+
 
 .project-header-container {
   margin-top: 150px;

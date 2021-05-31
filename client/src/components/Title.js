@@ -14,10 +14,10 @@ const Title = () => {
         Dylan Travis front-end web developer
       </Header>
       <Link to="projects" spy={true} smooth={true} duration={2000}>
-        <Button content="Projects" size="large" className="title-buttons" />
+        <Button circular content="Projects" size="large" className="title-buttons" />
       </Link>
       <Link to="info" spy={true} smooth={true} duration={2000}>
-        <Button content="Info" size="large" className="title-buttons" />
+        <Button circular content="Info" size="large" className="title-buttons" />
       </Link>
     </Segment>
   );

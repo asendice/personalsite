@@ -46,7 +46,7 @@ const App = () => {
         <div className="sixth">
           <div
             className="title-container"
-            style={{ transform: `translateY(${offSetY * 0.3}px)` }}
+            style={{ transform: `translateY(${offSetY * 0.1}px)` }}
           >
             <Title />
           </div>

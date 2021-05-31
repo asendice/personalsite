@@ -47,7 +47,6 @@ const Projects = ({ offSetY }) => {
     setOpen(true);
   };
 
-  console.log(index, "index");
 
   const renderModal = () => {
     if (selectedProj.images) {
@@ -128,7 +127,7 @@ const Projects = ({ offSetY }) => {
   const renderCards = () => {
     return proj.map((prj) => {
       return (
-        <Card onClick={() => onCardClick(prj)}>
+        <Card  onClick={() => onCardClick(prj)}>
           <Image className="project-img" src={prj.images[0]} />
           <Card.Content>
             <Card.Header>{prj.name}</Card.Header>
