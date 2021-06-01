@@ -195,7 +195,9 @@
 
 .tech-skills {
   margin-top: 50px !important;
-  /* border: coral solid 1px !important; */
+  margin-left: auto !important;
+  margin-right: auto !important;
+  background-color: grey !important;
 }
 
 .skill-image {

@@ -14,6 +14,7 @@ import redux from "../img/redux.png";
 import npm from "../img/npm.png";
 import scss from "../img/scss.png";
 import python from "../img/python.png";
+import express from "../img/express.png";
 import { Grid, Segment, Image, Table } from "semantic-ui-react";
 
 const Info = () => {
@@ -60,6 +61,10 @@ const Info = () => {
       name: "MongoDB",
     },
     {
+      pic: express,
+      name: "Express",
+    },
+    {
       pic: semantic,
       name: "Semantic Ui",
     },
@@ -80,7 +85,7 @@ const Info = () => {
   const renderImagesRow = (newArr) => {
     return newArr.map((img) => {
       return (
-        <Table.Cell width={1} textAlign="center">
+        <Table.Cell textAlign="center">
           <Image className="skill-image" src={img.pic} />
           <span style={{ color: "#fff" }}>{img.name}</span>
         </Table.Cell>
@@ -94,12 +99,20 @@ const Info = () => {
       <Grid stackable>
         <Grid.Row columns={2}>
           <Grid.Column>
-            <Segment className="tech-skills" basic textAlign="center">
+            <Segment
+            raised
+            compact
+              size="small"
+              className="tech-skills"
+              textAlign="center"
+            >
               <h1>Current Technical Skills:</h1>
-              <Table unstackable className="skills-table" basic compact>
-                <Table.Row>{renderImagesRow(images.slice(0, 5))}</Table.Row>
-                <Table.Row>{renderImagesRow(images.slice(5, 10))}</Table.Row>
-                <Table.Row>{renderImagesRow(images.slice(10))}</Table.Row>
+              <Table basic="very" compact collapsing unstackable className="skills-table">
+                <Table.Body>
+                  <Table.Row>{renderImagesRow(images.slice(0, 5))}</Table.Row>
+                  <Table.Row>{renderImagesRow(images.slice(5, 10))}</Table.Row>
+                  <Table.Row>{renderImagesRow(images.slice(10))}</Table.Row>
+                </Table.Body>
               </Table>
             </Segment>
           </Grid.Column>
