@@ -68,7 +68,10 @@ const Projects = ({ offSetY }) => {
           size="small"
           centered={false}
         >
-          <Modal.Header>{selectedProj.name}</Modal.Header>
+          <Modal.Header>
+            {selectedProj.name}
+            <Icon onClick={() => setOpen(false)} name="x" style={{ float: "right", cursor: "pointer" }} />
+          </Modal.Header>
           <Modal.Content>
             <Segment basic>{selectedProj.description}</Segment>
             <Segment textAlign="center" basic>
@@ -178,7 +181,7 @@ const Projects = ({ offSetY }) => {
       {/* <div className="project-header-container">
         <h1> PROJECTS </h1>
       </div> */}
-      <SectionHeader title="Projects"/>
+      <SectionHeader title="Projects" />
       <Segment basic compact className="project-container">
         <Card.Group centered>{renderCards()}</Card.Group>
       </Segment>
