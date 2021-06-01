@@ -70,7 +70,11 @@ const Projects = ({ offSetY }) => {
         >
           <Modal.Header>
             {selectedProj.name}
-            <Icon onClick={() => setOpen(false)} name="x" style={{ float: "right", cursor: "pointer" }} />
+            <Icon
+              onClick={() => setOpen(false)}
+              name="x"
+              style={{ float: "right", cursor: "pointer" }}
+            />
           </Modal.Header>
           <Modal.Content>
             <Segment basic>{selectedProj.description}</Segment>
@@ -142,8 +146,18 @@ const Projects = ({ offSetY }) => {
 
   const renderCards = () => {
     return proj.map((prj) => {
+      console.log(prj.name.slice(0, 1));
       return (
-        <Card onClick={() => onCardClick(prj)}>
+        <Card className="cards" onClick={() => onCardClick(prj)}>
+          <Segment textAlign="center" className={`overlay`}>
+            <Header as="h2" style={{ color: "#fff", marginTop: "50px" }}>
+              <Icon
+                size="big"
+                color="white"
+                name="search plus"
+              />{" "}
+            </Header>
+          </Segment>
           <Image className="project-img" src={prj.images[0]} />
           <Card.Content>
             <Card.Header>{prj.name}</Card.Header>
@@ -183,7 +197,8 @@ const Projects = ({ offSetY }) => {
       </div> */}
       <SectionHeader title="Projects" />
       <Segment basic compact className="project-container">
-        <Card.Group centered>{renderCards()}</Card.Group>
+        <div className="card-group">{renderCards()}</div>
+        {/* <Card.Group>{renderCards()}</Card.Group> */}
       </Segment>
       {/* <img className="branch" src={branch} style={{ transform: `translateY(${offSetY * 0.1}px)` }}></img> */}
       {/* <img

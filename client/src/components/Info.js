@@ -12,8 +12,8 @@ import bootstrap from "../img/bootstrap.png";
 import github from "../img/github.png";
 import redux from "../img/redux.png";
 import npm from "../img/npm.png";
-import scss from "../img/scss.png"
-import python from "../img/python.png"
+import scss from "../img/scss.png";
+import python from "../img/python.png";
 import { Grid, Segment, Image, Table } from "semantic-ui-react";
 
 const Info = () => {
@@ -77,30 +77,7 @@ const Info = () => {
     },
   ];
 
-  const renderImagesRowOne = () => {
-    const newArr = images.slice(0, 5);
-    return newArr.map((img) => {
-      return (
-        <Table.Cell textAlign="center">
-          <Image className="skill-image" src={img.pic} />
-          <span style={{ color: "#fff" }}>{img.name}</span>
-        </Table.Cell>
-      );
-    });
-  };
-  const renderImagesRowTwo = () => {
-    const newArr = images.slice(5, 10);
-    return newArr.map((img) => {
-      return (
-        <Table.Cell textAlign="center">
-          <Image className="skill-image" src={img.pic} />
-          <span style={{ color: "#fff" }}>{img.name}</span>
-        </Table.Cell>
-      );
-    });
-  };
-  const renderImagesRowThree = () => {
-    const newArr = images.slice(10);
+  const renderImagesRow = (newArr) => {
     return newArr.map((img) => {
       return (
         <Table.Cell textAlign="center">
@@ -120,12 +97,13 @@ const Info = () => {
             <Segment className="tech-skills" basic textAlign="center">
               <h1>Current Technical Skills:</h1>
               <Table unstackable className="skills-table" basic compact>
-                <Table.Row>{renderImagesRowOne()}</Table.Row>
-                <Table.Row>{renderImagesRowTwo()}</Table.Row>
-                <Table.Row>{renderImagesRowThree()}</Table.Row>
+                <Table.Row>{renderImagesRow(images.slice(0, 5))}</Table.Row>
+                <Table.Row>{renderImagesRow(images.slice(5, 10))}</Table.Row>
+                <Table.Row>{renderImagesRow(images.slice(10))}</Table.Row>
               </Table>
             </Segment>
           </Grid.Column>
+          <Grid.Column></Grid.Column>
         </Grid.Row>
       </Grid>
     </div>
