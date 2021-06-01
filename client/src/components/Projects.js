@@ -151,11 +151,7 @@ const Projects = ({ offSetY }) => {
         <Card className="cards" onClick={() => onCardClick(prj)}>
           <Segment textAlign="center" className={`overlay`}>
             <Header as="h2" style={{ color: "#fff", marginTop: "50px" }}>
-              <Icon
-                size="big"
-                color="white"
-                name="search plus"
-              />{" "}
+              <Icon size="big" color="white" name="search plus" />{" "}
             </Header>
           </Segment>
           <Image className="project-img" src={prj.images[0]} />
@@ -198,7 +194,6 @@ const Projects = ({ offSetY }) => {
       <SectionHeader title="Projects" />
       <Segment basic compact className="project-container">
         <div className="card-group">{renderCards()}</div>
-        {/* <Card.Group>{renderCards()}</Card.Group> */}
       </Segment>
       {/* <img className="branch" src={branch} style={{ transform: `translateY(${offSetY * 0.1}px)` }}></img> */}
       {/* <img
@@ -211,8 +206,9 @@ const Projects = ({ offSetY }) => {
         src={birdMelon}
         style={{ transform: `translateX(${offSetY * 0.7}px)` }}
       ></img> */}
+      {/* <div className="tree-line"></div> */}
+      <img className="tree-line" src={treeLine} />
       {renderModal()}
-      {/* <img style={{marginTop: "auto", position: "absolute"}} src={treeLine}></img> */}
     </div>
   );
 };

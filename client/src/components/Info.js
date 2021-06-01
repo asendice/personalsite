@@ -80,7 +80,7 @@ const Info = () => {
   const renderImagesRow = (newArr) => {
     return newArr.map((img) => {
       return (
-        <Table.Cell textAlign="center">
+        <Table.Cell width={1} textAlign="center">
           <Image className="skill-image" src={img.pic} />
           <span style={{ color: "#fff" }}>{img.name}</span>
         </Table.Cell>
