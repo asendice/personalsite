@@ -11,9 +11,6 @@ import {
 } from "semantic-ui-react";
 import SectionHeader from "./SectionHeader";
 import treeLine from "../img/treeLine.png";
-import birdMelon from "../img/birdMelon.png";
-import birdNaplesYellow from "../img/birdNaplesYellow.png";
-import branch from "../img/branch.png";
 import backendApi from "../apis/backendApi";
 
 const Projects = ({ offSetY }) => {
@@ -207,8 +204,8 @@ const Projects = ({ offSetY }) => {
         style={{ transform: `translateX(${offSetY * 0.7}px)` }}
       ></img> */}
       {/* <div className="tree-line"></div> */}
-      <img className="tree-line" src={treeLine} />
       {renderModal()}
+
     </div>
   );
 };

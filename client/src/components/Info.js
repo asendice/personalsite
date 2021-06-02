@@ -96,19 +96,26 @@ const Info = () => {
 
   return (
     <div id="info" className="info">
+      <div className="space"></div>
+
       <SectionHeader title="info" />
       <Grid stackable>
         <Grid.Row columns={2}>
           <Grid.Column>
             <Segment
-            raised
-            compact
+              raised
+              compact
               size="small"
               className="tech-skills"
               textAlign="center"
             >
               <h1>Current Technical Skills:</h1>
-              <Table basic="very" compact collapsing unstackable className="skills-table">
+              <Table
+                basic="very"
+                compact
+                collapsing
+                unstackable
+              >
                 <Table.Body>
                   <Table.Row>{renderImagesRow(images.slice(0, 5))}</Table.Row>
                   <Table.Row>{renderImagesRow(images.slice(5, 10))}</Table.Row>

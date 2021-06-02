@@ -11,7 +11,6 @@
   box-shadow: none !important;
   margin-top: 380px !important;
   color: #fff;
-  z-index: inherit;
 }
 
 .section-one {
@@ -24,12 +23,13 @@
 .title-buttons {
   width: 107px !important;
   background: #00162b !important;
-  color: coral !important;
+  color: grey !important;
   cursor: pointer !important;
 }
 
 .title-buttons:hover {
   opacity: 0.9 !important;
+  color: white !important;
 }
 
 .card-buttons {
@@ -84,10 +84,19 @@
   border: 1px solid black;
 }
 
+.space {
+  background-image: url(../img/stars.png);
+  background-size: 100% 100%;
+  width: 100%;
+  position: absolute;
+  height: 100%;
+}
+
 .tree-line {
   /* margin-top: 150px !important; */
+
   position: absoulte;
-  bottom: -20%;
+  /* bottom: -20%; */
 }
 
 .bkg {
@@ -199,8 +208,9 @@
   margin-top: 50px !important;
   margin-left: auto !important;
   margin-right: auto !important;
-  background-color: grey !important;
+  background-color: grey !important
 }
+
 
 .skill-image {
   height: 60px !important;
@@ -244,10 +254,10 @@
 .footer-container {
   position: absoulte !important;
   bottom: -25% !important;
-  background-color: black !important;
   margin: 0 !important;
-  min-height: 100px !important;
+  padding: 0 !important;
   border-radius: 0 !important;
+  border-bottom: black solid 2px;
 }
 
 .footer-icons {

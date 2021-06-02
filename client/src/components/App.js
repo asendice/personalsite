@@ -3,6 +3,7 @@ import Title from "./Title";
 import Projects from "./Projects";
 import Info from "./Info";
 import Footer from "./Footer";
+import treeLine from "../img/treeLine.png";
 
 const App = () => {
   const [offSetY, setOffSetY] = useState(0);
@@ -57,6 +58,8 @@ const App = () => {
         
 
       </div>
+      <img className="tree-line" src={treeLine}></img>
+
     </>
   );
 };
