@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import Title from "./Title";
 import Projects from "./Projects";
 import Info from "./Info";
+import Footer from "./Footer";
 
 const App = () => {
   const [offSetY, setOffSetY] = useState(0);
@@ -12,7 +13,6 @@ const App = () => {
 
   useEffect(() => {
     window.addEventListener("scroll", handleScroll);
-
     return () => window.removeEventListener("scroll", handleScroll);
   });
 
@@ -45,14 +45,17 @@ const App = () => {
 
         <div className="sixth">
           <div style={{ transform: `translateY(${offSetY * 0.3}px)` }}>
-            <Title />
+            <Title offSetY={offSetY}/>
           </div>
         </div>
       </div>
 
       <div className="section-two">
         <Projects offSetY={offSetY} />
+        <div style={{ transform: `translateY(${offSetY * 0.55}px)` }} className="moon"></div>
         <Info />
+        
+
       </div>
     </>
   );

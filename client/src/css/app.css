@@ -49,7 +49,6 @@
 .section-two {
   height: 100vh;
   width: 100%;
-  /* margin-top: 20px !important; */
   background-color: #00162b !important;
   position: absolute;
   z-index: 2 !important;
@@ -59,7 +58,7 @@
   margin-left: 50px !important;
   margin-right: 50px !important;
   cursor: pointer !important;
-  color: coral !important;
+  color: grey !important;
   opacity: 0.4 !important;
   transition: opacity 0.4s ease-out !important;
 }
@@ -87,7 +86,8 @@
 
 .tree-line {
   /* margin-top: 150px !important; */
-  position: bottom;
+  position: absoulte;
+  bottom: -20%;
 }
 
 .bkg {
@@ -99,13 +99,15 @@
   z-index: 2;
 }
 
-.branch {
-  background-image: url(../img/branch.png);
+.moon {
+  background-image: url(../img/moon.png);
   position: absolute;
-  height: 100%;
-  width: 100%;
+  height: 250px;
+  width: 250px;
   background-size: 100% 100%;
   z-index: 3;
+  top: 0;
+  right: 50px;
 }
 
 .skySun {
@@ -237,6 +239,26 @@
 .cards:hover .overlay {
   opacity: 0.9 !important;
   cursor: pointer !important;
+}
+
+.footer-container {
+  position: absoulte !important;
+  bottom: -25% !important;
+  background-color: black !important;
+  margin: 0 !important;
+  min-height: 100px !important;
+  border-radius: 0 !important;
+}
+
+.footer-icons {
+  border: none !important;
+  box-shadow: none !important;
+  color: white !important;
+  opacity: 0.6 !important;
+}
+
+.footer-icons:hover {
+  opacity: 1 !important;
 }
 
 div h1 {

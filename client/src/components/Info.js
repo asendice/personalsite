@@ -1,5 +1,6 @@
 import React from "react";
 import SectionHeader from "./SectionHeader";
+import Footer from "./Footer";
 import html from "../img/html.png";
 import css from "../img/css.png";
 import semantic from "../img/semanticui.png";
@@ -119,6 +120,7 @@ const Info = () => {
           <Grid.Column></Grid.Column>
         </Grid.Row>
       </Grid>
+      <Footer />
     </div>
   );
 };
