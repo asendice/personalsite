@@ -18,7 +18,7 @@ import python from "../img/python.png";
 import express from "../img/express.png";
 import { Grid, Segment, Image, Table } from "semantic-ui-react";
 
-const Info = () => {
+const Info = ({ offSetY }) => {
   const images = [
     {
       pic: html,
@@ -96,26 +96,30 @@ const Info = () => {
 
   return (
     <div id="info" className="info">
-      <div className="space"></div>
-
       <SectionHeader title="info" />
       <Grid stackable>
         <Grid.Row columns={2}>
           <Grid.Column>
+            <Segment textAlign="center" basic className="tech-skills">
+              <h1>About Me</h1>
+              <p style={{ color: "#fff", fontSize: "1.5rem" }}>
+                {" "}
+                Hello, my name is Dylan and thank you for visiting my portfolio
+                page.{" "}
+              </p>
+            </Segment>
+          </Grid.Column>
+          <Grid.Column>
             <Segment
               raised
               compact
+              basic
               size="small"
               className="tech-skills"
               textAlign="center"
             >
               <h1>Current Technical Skills:</h1>
-              <Table
-                basic="very"
-                compact
-                collapsing
-                unstackable
-              >
+              <Table basic="very" compact collapsing unstackable>
                 <Table.Body>
                   <Table.Row>{renderImagesRow(images.slice(0, 5))}</Table.Row>
                   <Table.Row>{renderImagesRow(images.slice(5, 10))}</Table.Row>
@@ -124,7 +128,6 @@ const Info = () => {
               </Table>
             </Segment>
           </Grid.Column>
-          <Grid.Column></Grid.Column>
         </Grid.Row>
       </Grid>
       <Footer />

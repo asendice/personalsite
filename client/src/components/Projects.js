@@ -47,8 +47,6 @@ const Projects = ({ offSetY }) => {
     setOpen(true);
   };
 
-  console.log(selectedProj.skills);
-
   const renderSkills = () => {
     return selectedProj.skills.map((skill) => {
       return <Label>{skill} </Label>;
@@ -80,7 +78,7 @@ const Projects = ({ offSetY }) => {
             </Segment>
             <Segment textAlign="center" basic className="carousel">
               <Image
-                className="carousel-image animate one fadeInRight"
+                className="carousel-image"
                 src={selectedProj.images[index]}
               />
               <Button
@@ -143,7 +141,6 @@ const Projects = ({ offSetY }) => {
 
   const renderCards = () => {
     return proj.map((prj) => {
-      console.log(prj.name.slice(0, 1));
       return (
         <Card className="cards" onClick={() => onCardClick(prj)}>
           <Segment textAlign="center" className={`overlay`}>
@@ -154,7 +151,6 @@ const Projects = ({ offSetY }) => {
           <Image className="project-img" src={prj.images[0]} />
           <Card.Content>
             <Card.Header>{prj.name}</Card.Header>
-            <Card.Description>{prj.description}</Card.Description>
           </Card.Content>
           <Card.Content extra className="card-buttons">
             <Button
@@ -205,7 +201,6 @@ const Projects = ({ offSetY }) => {
       ></img> */}
       {/* <div className="tree-line"></div> */}
       {renderModal()}
-
     </div>
   );
 };
