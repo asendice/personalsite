@@ -60,7 +60,6 @@ const Projects = ({ offSetY }) => {
           onClose={() => setOpen(false)}
           onOpen={() => setOpen(true)}
           open={open}
-          size="small"
           centered={false}
         >
           <Modal.Header>
@@ -78,6 +77,7 @@ const Projects = ({ offSetY }) => {
             </Segment>
             <Segment textAlign="center" basic className="carousel">
               <Image
+              fluid
                 className="carousel-image"
                 src={selectedProj.images[index]}
               />

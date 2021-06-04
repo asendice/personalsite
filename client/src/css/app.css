@@ -52,7 +52,7 @@
   width: 100%;
   position: absolute;
   z-index: 2 !important;
-  -webkit-transform: translate3d(0,0,0);
+  -webkit-transform: translate3d(0, 0, 0);
 }
 
 .arrows {
@@ -81,8 +81,16 @@
   margin-top: 0px !important;
   width: 100%;
   height: 100vh;
-  background-image: linear-gradient(to bottom, #00162b, #100f21, #100713, #0e030a, #000000) !important;
-  border: 1px solid #00162b !important;
+  background-image: linear-gradient(
+    to bottom,
+    #00162b,
+    #100f21,
+    #100713,
+    #0e030a,
+    #000000
+  ) !important;
+  border-top: #00162b 1px solid !important;
+  border-bottom: #000000 1px solid !important;
 }
 
 .tree-line {
@@ -131,8 +139,7 @@
   width: 100%;
   background-size: 100% 100%;
   z-index: 2;
-  -webkit-transform: translate3d(0,0,0);
-
+  -webkit-transform: translate3d(0, 0, 0);
 }
 
 .second {
@@ -142,8 +149,7 @@
   width: 100%;
   background-size: 100% 100%;
   z-index: 2;
-  -webkit-transform: translate3d(0,0,0);
-
+  -webkit-transform: translate3d(0, 0, 0);
 }
 .third {
   background-image: url(../img/third.png);
@@ -152,8 +158,7 @@
   width: 100%;
   background-size: 100% 100%;
   z-index: 2;
-  -webkit-transform: translate3d(0,0,0);
-
+  -webkit-transform: translate3d(0, 0, 0);
 }
 
 .fourth {
@@ -163,8 +168,7 @@
   width: 100%;
   background-size: 100% 100%;
   z-index: 2;
-  -webkit-transform: translate3d(0,0,0);
-
+  -webkit-transform: translate3d(0, 0, 0);
 }
 .fifth {
   background-image: url(../img/fifth.png);
@@ -173,8 +177,7 @@
   width: 100%;
   background-size: 100% 100%;
   z-index: 2;
-  -webkit-transform: translate3d(0,0,0);
-
+  -webkit-transform: translate3d(0, 0, 0);
 }
 .sixth {
   background-image: url(../img/sixth.png);
@@ -183,7 +186,7 @@
   width: 100%;
   background-size: 100% 100%;
   z-index: 2;
-  -webkit-transform: translate3d(0,0,0);
+  -webkit-transform: translate3d(0, 0, 0);
 }
 
 .project-header-container {
@@ -212,13 +215,17 @@
   float: left !important;
 }
 
+.carousel {
+}
+
 .carousel-index {
   margin-top: 10px !important;
 }
 
 .carousel-image {
-  width: 900px !important;
-  height: 450px !important;
+  border: black solid 1px !important;
+  border-radius: 25px !important;
+  height: 540px !important;
 }
 
 .tech-skills {
@@ -226,7 +233,6 @@
   margin-left: auto !important;
   margin-right: auto !important;
 }
-
 
 .skill-image {
   height: 60px !important;
@@ -270,7 +276,7 @@
 }
 
 .footer-container {
-  bottom: 0% !important;
+  background-color: #000000 !important;
   margin: 0 !important;
   padding: 0 !important;
   border-radius: 0 !important;

@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from "react";
 import Title from "./Title";
 import Projects from "./Projects";
-import Info from "./Info";
+import Footer from "./Footer";
 
+import Info from "./Info";
 
 const App = () => {
   const [offSetY, setOffSetY] = useState(0);
@@ -53,6 +54,7 @@ const App = () => {
       <div className="section-two">
         <Projects />
         <Info offSetY={offSetY} />
+        <Footer />
       </div>
     </>
   );

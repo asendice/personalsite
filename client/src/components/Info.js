@@ -1,6 +1,5 @@
 import React from "react";
 import SectionHeader from "./SectionHeader";
-import Footer from "./Footer";
 import html from "../img/html.png";
 import css from "../img/css.png";
 import semantic from "../img/semanticui.png";
@@ -100,12 +99,14 @@ const Info = ({ offSetY }) => {
       <Grid stackable>
         <Grid.Row columns={2}>
           <Grid.Column>
-            <Segment textAlign="center" basic className="tech-skills">
+            <Segment padded="very" textAlign="center" basic className="tech-skills">
               <h1>About Me</h1>
               <p style={{ color: "#fff", fontSize: "1.5rem" }}>
                 {" "}
                 Hello, my name is Dylan and thank you for visiting my portfolio
-                page.{" "}
+                page. I've attended Nucamp Co's coding bootcamp and have taken their Web Dev Fundamentals, and Nucamp's Full-Stack
+                courses, receiving  completion certifcates from both courses. I have been coding
+                for just over three years and have decided on pursuing it has a careeer. {" "}
               </p>
             </Segment>
           </Grid.Column>
@@ -130,7 +131,6 @@ const Info = ({ offSetY }) => {
           </Grid.Column>
         </Grid.Row>
       </Grid>
-      <Footer />
     </div>
   );
 };
