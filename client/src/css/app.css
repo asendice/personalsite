@@ -199,8 +199,6 @@
   float: left !important;
 }
 
-.carousel {
-}
 
 .carousel-index {
   margin-top: 10px !important;
@@ -209,7 +207,13 @@
 .carousel-image {
   border: black solid 1px !important;
   border-radius: 25px !important;
-  height: 540px !important;
+  height: 500px !important;
+}
+
+@media screen and (max-width: 600px) {
+  .carousel-image {
+    height: 300px !important;
+  }
 }
 
 .tech-skills {
