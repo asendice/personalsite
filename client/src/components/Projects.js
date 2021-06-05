@@ -166,7 +166,7 @@ const Projects = ({ offSetY }) => {
             <Button
               className="card-btn"
               color="blue"
-              href={prj.live}
+              href={prj.live} 
               rel="noopener noreferrer"
               target="_blank"
             >

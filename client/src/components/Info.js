@@ -99,14 +99,21 @@ const Info = ({ offSetY }) => {
       <Grid stackable>
         <Grid.Row columns={2}>
           <Grid.Column>
-            <Segment padded="very" textAlign="center" basic className="tech-skills">
+            <Segment
+              padded="very"
+              textAlign="center"
+              basic
+              className="tech-skills"
+            >
               <h1>About Me</h1>
               <p style={{ color: "#fff", fontSize: "1.5rem" }}>
                 {" "}
                 Hello, my name is Dylan and thank you for visiting my portfolio
-                page. I've attended Nucamp Co's coding bootcamp and have taken their Web Dev Fundamentals, and Nucamp's Full-Stack
-                courses, receiving  completion certifcates from both courses. I have been coding
-                for just over three years and have decided on pursuing it has a careeer. {" "}
+                page. I've attended Nucamp Co's coding bootcamp and have taken
+                their Web Dev Fundamentals, and Nucamp's Full-Stack courses,
+                receiving completion certifcates from both courses. I have been
+                coding for just over three years and have decided on pursuing it
+                has a careeer.{" "}
               </p>
             </Segment>
           </Grid.Column>
@@ -129,6 +136,29 @@ const Info = ({ offSetY }) => {
               </Table>
             </Segment>
           </Grid.Column>
+        </Grid.Row>
+        <Grid.Row>
+          <Segment
+            padded="very"
+            textAlign="center"
+            basic
+            className="tech-skills"
+          >
+            <h1>Contact Me</h1>
+            <a
+              href="mailto:dylan.travis23@outlook.com?subject=We are interested in hiring you!"
+              rel="noopener noreferrer"
+              target="_blank"
+              className="email"
+              style={{ color: "#fff", fontSize: "1.5rem" }}
+            >
+              dylan.travis23@outlok.com
+            </a>
+            <p>{`dylan.travis23@outlook.com `}</p>
+            <p
+              style={{ color: "#fff", fontSize: "1.5rem" }}
+            >{`775-203-4364 `}</p>
+          </Segment>
         </Grid.Row>
       </Grid>
     </div>

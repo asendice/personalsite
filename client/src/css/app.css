@@ -48,7 +48,7 @@
 }
 
 .section-two {
-  height: 100vh;
+  height: 100%;
   width: 100%;
   position: absolute;
   z-index: 2 !important;
@@ -80,7 +80,7 @@
 .info {
   margin-top: 0px !important;
   width: 100%;
-  height: 100vh;
+  height: 100vh !important;
   background-image: linear-gradient(
     to bottom,
     #00162b,
@@ -91,6 +91,11 @@
   ) !important;
   border-top: #00162b 1px solid !important;
   border-bottom: #000000 1px solid !important;
+}
+@media screen and (max-width: 1200px) {
+  .info {
+    height: auto !important;
+  }
 }
 
 .tree-line {
@@ -105,31 +110,10 @@
 
 .bkg {
   background-image: url(../img/bkg.png);
+  background-size: 100% 100%;
   width: 100%;
   position: fixed;
   height: 100%;
-}
-
-.moon {
-  background-image: url(../img/moon.png);
-  position: absolute;
-  height: 250px;
-  width: 250px;
-  background-size: 100% 100%;
-  z-index: 3;
-  top: 0;
-  right: 50px;
-}
-.sun {
-  background-image: url(../img/Sun.png);
-
-  position: absolute;
-  height: 300px;
-  width: 300px;
-  background-size: 100% 100%;
-  z-index: 3;
-  bottom: 0;
-  left: 50px;
 }
 
 .skySun {
@@ -280,6 +264,7 @@
   margin: 0 !important;
   padding: 0 !important;
   border-radius: 0 !important;
+  bottom: 0% !important;
 }
 
 .footer-icons {
@@ -289,8 +274,16 @@
   opacity: 0.6 !important;
 }
 
+.social-container {
+  margin-top: 5% !important;
+}
+
 .footer-icons:hover {
   opacity: 1 !important;
+}
+
+.email:hover {
+  text-decoration: underline !important;
 }
 
 div h1 {
