@@ -33,21 +33,21 @@ const Title = ({ offSetY }) => {
           rel="noopener noreferrer"
           target="_blank"
         >
-          <Icon className="footer-icons" size="huge" name="linkedin" />
+          <Icon className="title-icons" size="huge" name="linkedin" />
         </a>
         <a
           href="https://www.github.com/asendice"
           rel="noopener noreferrer"
           target="_blank"
         >
-          <Icon className="footer-icons" size="huge" name="github" />
+          <Icon className="title-icons" size="huge" name="github" />
         </a>
         <a
           href="mailto:dylan.travis23@outlook.com?subject=We are interested in hiring you!"
           rel="noopener noreferrer"
           target="_blank"
         >
-          <Icon className="footer-icons" size="huge" name="file" />
+          <Icon className="title-icons" size="huge" name="file" />
         </a>
       </div>
     </Segment>

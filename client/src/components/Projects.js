@@ -77,7 +77,7 @@ const Projects = ({ offSetY }) => {
             </Segment>
             <Segment textAlign="center" basic className="carousel">
               <Image
-              fluid
+                fluid
                 className="carousel-image"
                 src={selectedProj.images[index]}
               />
@@ -113,7 +113,7 @@ const Projects = ({ offSetY }) => {
           <Modal.Content>
             <Segment basic textAlign="center">
               <Button
-                className="card-btn"
+                className={selectedProj.live != "none" ? "card-btn" : "only-ghub"}
                 color="black"
                 href={selectedProj.gitHub}
                 rel="noopener noreferrer"
@@ -122,16 +122,18 @@ const Projects = ({ offSetY }) => {
                 <Icon name="github" />
                 GitHub
               </Button>
-              <Button
-                className="card-btn"
-                color="blue"
-                href={selectedProj.live}
-                rel="noopener noreferrer"
-                target="_blank"
-              >
-                <Icon name="rocket" />
-                Demo
-              </Button>
+              {selectedProj.live != "none" ? (
+                <Button
+                  className="card-btn"
+                  color="blue"
+                  href={selectedProj.live}
+                  rel="noopener noreferrer"
+                  target="_blank"
+                >
+                  <Icon name="rocket" />
+                  Demo
+                </Button>
+              ) : null}
             </Segment>
           </Modal.Content>
         </Modal>
@@ -154,7 +156,8 @@ const Projects = ({ offSetY }) => {
           </Card.Content>
           <Card.Content extra className="card-buttons">
             <Button
-              className="card-btn"
+              className={prj.live != "none" ? "card-btn" : "only-ghub"}
+              style={{ width: "100%" }}
               color="black"
               href={prj.gitHub}
               rel="noopener noreferrer"
@@ -163,16 +166,18 @@ const Projects = ({ offSetY }) => {
               <Icon name="github" />
               GitHub
             </Button>
-            <Button
-              className="card-btn"
-              color="blue"
-              href={prj.live} 
-              rel="noopener noreferrer"
-              target="_blank"
-            >
-              <Icon name="rocket" />
-              Demo
-            </Button>
+            {prj.live != "none" ? (
+              <Button
+                className="card-btn"
+                color="blue"
+                href={prj.live}
+                rel="noopener noreferrer"
+                target="_blank"
+              >
+                <Icon name="rocket" />
+                Demo
+              </Button>
+            ) : null}
           </Card.Content>
         </Card>
       );

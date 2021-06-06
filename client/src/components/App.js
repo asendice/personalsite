@@ -24,9 +24,7 @@ const App = () => {
         <div
           className="skySun"
           style={{ transform: `translateY(${offSetY * 0.9}px)` }}
-        >
-          {" "}
-        </div>
+        ></div>
         <div
           className="second"
           style={{ transform: `translateY(${offSetY * 0.8}px)` }}
