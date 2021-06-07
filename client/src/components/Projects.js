@@ -10,7 +10,6 @@ import {
   Icon,
 } from "semantic-ui-react";
 import SectionHeader from "./SectionHeader";
-import treeLine from "../img/treeLine.png";
 import backendApi from "../apis/backendApi";
 
 const Projects = ({ offSetY }) => {
@@ -113,7 +112,7 @@ const Projects = ({ offSetY }) => {
           <Modal.Content>
             <Segment basic textAlign="center">
               <Button
-                className={selectedProj.live != "none" ? "card-btn" : "only-ghub"}
+                className={selectedProj.live !== "none" ? "card-btn" : "only-ghub"}
                 color="black"
                 href={selectedProj.gitHub}
                 rel="noopener noreferrer"
@@ -122,7 +121,7 @@ const Projects = ({ offSetY }) => {
                 <Icon name="github" />
                 GitHub
               </Button>
-              {selectedProj.live != "none" ? (
+              {selectedProj.live !== "none" ? (
                 <Button
                   className="card-btn"
                   color="blue"
@@ -156,7 +155,7 @@ const Projects = ({ offSetY }) => {
           </Card.Content>
           <Card.Content extra className="card-buttons">
             <Button
-              className={prj.live != "none" ? "card-btn" : "only-ghub"}
+              className={prj.live !== "none" ? "card-btn" : "only-ghub"}
               style={{ width: "100%" }}
               color="black"
               href={prj.gitHub}
@@ -166,7 +165,7 @@ const Projects = ({ offSetY }) => {
               <Icon name="github" />
               GitHub
             </Button>
-            {prj.live != "none" ? (
+            {prj.live !== "none" ? (
               <Button
                 className="card-btn"
                 color="blue"
