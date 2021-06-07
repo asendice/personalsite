@@ -1,4 +1,6 @@
 const Project = require("../models/Project");
+const Skill = require("../models/Skill");
+const AboutMe = require("../models/AboutMe");
 
 exports.getProjects = (req, res) => {
   Project.find().then((proj) => {
@@ -10,6 +12,34 @@ exports.getProjects = (req, res) => {
       return res.status(200).json({
         success: true,
         message: proj,
+      });
+    }
+  });
+};
+exports.getSkills = (req, res) => {
+  Skill.find().then((skill) => {
+    if (!skill) {
+      return res.status(404).json({
+        errors: [{ user: "Skills cannot be found" }],
+      });
+    } else {
+      return res.status(200).json({
+        success: true,
+        message: skill,
+      });
+    }
+  });
+};
+exports.getAboutMe = (req, res) => {
+  AboutMe.find().then((txt) => {
+    if (!txt) {
+      return res.status(404).json({
+        errors: [{ user: "AboutMe cannot be found" }],
+      });
+    } else {
+      return res.status(200).json({
+        success: true,
+        message: txt,
       });
     }
   });

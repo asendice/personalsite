@@ -111,15 +111,6 @@
   }
 }
 
-.tree-line {
-  background-image: url(../img/treeLine.png);
-  background-size: cover;
-  width: 100%;
-  position: absolute;
-  height: 20%;
-  top: 180%;
-  z-index: 2;
-}
 
 .bkg {
   background-image: url(../img/bkg.png);
@@ -297,7 +288,7 @@
   opacity: 1 !important;
 }
 
-.email:hover {
+.links:hover {
   text-decoration: underline !important;
 }
 

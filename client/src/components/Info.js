@@ -1,86 +1,34 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import SectionHeader from "./SectionHeader";
-import html from "../img/html.png";
-import css from "../img/css.png";
-import semantic from "../img/semanticui.png";
-import js from "../img/JS.png";
-import react from "../img/react.png";
-import native from "../img/native.png";
-import node from "../img/node.png";
-import mongo from "../img/mongodb.gif";
-import bootstrap from "../img/bootstrap.png";
-import github from "../img/github.png";
-import redux from "../img/redux.png";
-import npm from "../img/npm.png";
-import scss from "../img/scss.png";
-import python from "../img/python.png";
-import express from "../img/express.png";
+import backendApi from "../apis/backendApi";
 import { Grid, Segment, Image, Table } from "semantic-ui-react";
 
 const Info = ({ offSetY }) => {
-  const images = [
-    {
-      pic: html,
-      name: "HTML",
-    },
-    {
-      pic: css,
-      name: "CSS",
-    },
-    {
-      pic: scss,
-      name: "SCSS",
-    },
-    {
-      pic: js,
-      name: "JavaScript",
-    },
-    {
-      pic: python,
-      name: "Python",
-    },
-    {
-      pic: react,
-      name: "React",
-    },
-    {
-      pic: native,
-      name: "React Native",
-    },
-    {
-      pic: redux,
-      name: "Redux",
-    },
+  const [skills, setSkills] = useState([]);
 
-    {
-      pic: node,
-      name: "NodeJS",
-    },
-    {
-      pic: mongo,
-      name: "MongoDB",
-    },
-    {
-      pic: express,
-      name: "Express",
-    },
-    {
-      pic: semantic,
-      name: "Semantic Ui",
-    },
-    {
-      pic: bootstrap,
-      name: "Bootstrap",
-    },
-    {
-      pic: github,
-      name: "GitHub",
-    },
-    {
-      pic: npm,
-      name: "NPM",
-    },
-  ];
+  console.log(skills, "skills");
+
+  const getSkills = async () => {
+    await backendApi
+      .get("/skills")
+      .then((response) => {
+        if (response) {
+          console.log(response, "response");
+          return response;
+        } else {
+          const error = new Error(
+            `Error ${response.status}: ${response.statusText}`
+          );
+          error.response = response;
+          throw error;
+        }
+      })
+      .then((response) => setSkills(response.data.message));
+  };
+
+  useEffect(() => {
+    getSkills();
+  }, []);
 
   const renderImagesRow = (newArr) => {
     return newArr.map((img) => {
@@ -107,13 +55,49 @@ const Info = ({ offSetY }) => {
             >
               <h1>About Me</h1>
               <p style={{ color: "#fff", fontSize: "1.5rem" }}>
+                Hello my name is Dylan, and thank you for visiting my portfolio
+                site. I developed a passion for coding in early 2017. Python was
+                the first programming language that I decided to learn and ever
+                since then I have been hooked. I attended a coding bootcamp
                 {" "}
-                Hello, my name is Dylan and thank you for visiting my portfolio
-                page. I've attended Nucamp Co's coding bootcamp and have taken
-                their Web Dev Fundamentals, and Nucamp's Full-Stack courses,
-                receiving completion certifcates from both courses. I have been
-                coding for just over three years and have decided on pursuing it
-                has a careeer.{" "}
+                <a
+                  href="https://www.nucamp.co/community/"
+                  rel="noopener noreferrer"
+                  target="_blank"
+                  className="links"
+                >
+                  Nucamp Co
+                </a>
+                {" "}
+                in 2019 and early 2020 and recived two certifcates of completion
+                from their Web Development Fundamentals
+                Course (HTML/CSS/JS/Bootstrap) and their{" "}
+                <a
+                  href="https://dtravmysite.s3-us-west-1.amazonaws.com/Front_End_Certificate_Dylan.pdf"
+                  rel="noopener noreferrer"
+                  target="_blank"
+                  className="links"
+                >
+                  Front End Web and Mobile Development Course
+                </a>
+                {" "}
+                (React/React-Native/Redux/SCSS). My favorite part about coding
+                in general is the process between, being faced with a problem I
+                don't directly know how to solve and arriving at a solution for
+                that problem. I will uniquley bring value to your team, with my
+                background as a store manager. I have strong communication,
+                leadership, and time management skills that will accelerate any
+                learning curve and help you team acheive deadlines. If you would
+                like to work with me, please call or{" "}
+                <a
+                  href="mailto:dylan.travis23@outlook.com?subject=We are interested in hiring you!"
+                  rel="noopener noreferrer"
+                  target="_blank"
+                  className="links"
+                >
+                  email
+                </a>
+                .
               </p>
             </Segment>
           </Grid.Column>
@@ -129,9 +113,9 @@ const Info = ({ offSetY }) => {
               <h1>Current Technical Skills:</h1>
               <Table basic="very" compact collapsing unstackable>
                 <Table.Body>
-                  <Table.Row>{renderImagesRow(images.slice(0, 5))}</Table.Row>
-                  <Table.Row>{renderImagesRow(images.slice(5, 10))}</Table.Row>
-                  <Table.Row>{renderImagesRow(images.slice(10))}</Table.Row>
+                  <Table.Row>{renderImagesRow(skills.slice(0, 5))}</Table.Row>
+                  <Table.Row>{renderImagesRow(skills.slice(5, 10))}</Table.Row>
+                  <Table.Row>{renderImagesRow(skills.slice(10))}</Table.Row>
                 </Table.Body>
               </Table>
             </Segment>
@@ -152,7 +136,7 @@ const Info = ({ offSetY }) => {
               className="email"
               style={{ color: "#fff", fontSize: "1.5rem" }}
             >
-              dylan.travis23@outlok.com
+              dylan.travis23@outlook.com
             </a>
             <p>{`dylan.travis23@outlook.com `}</p>
             <p
