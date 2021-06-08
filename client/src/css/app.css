@@ -93,7 +93,7 @@
 .info {
   margin-top: 0px !important;
   width: 100%;
-  height: 100vh !important;
+  min-height: 100vh !important;
   background-image: linear-gradient(
     to bottom,
     #00162b,
@@ -268,9 +268,6 @@
 .footer-container {
   background-color: #000000 !important;
   margin: 0 !important;
-  padding: 0 !important;
-  border-radius: 0 !important;
-  bottom: 0% !important;
 }
 
 .footer-icons {

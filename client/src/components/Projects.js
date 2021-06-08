@@ -72,6 +72,7 @@ const Projects = ({ offSetY }) => {
           <Modal.Content>
             <Segment basic>{selectedProj.description}</Segment>
             <Segment textAlign="center" basic>
+              <Header>Technologies used:</Header>
               {renderSkills()}
             </Segment>
             <Segment textAlign="center" basic className="carousel">
@@ -112,7 +113,9 @@ const Projects = ({ offSetY }) => {
           <Modal.Content>
             <Segment basic textAlign="center">
               <Button
-                className={selectedProj.live !== "none" ? "card-btn" : "only-ghub"}
+                className={
+                  selectedProj.live !== "none" ? "card-btn" : "only-ghub"
+                }
                 color="black"
                 href={selectedProj.gitHub}
                 rel="noopener noreferrer"
@@ -185,25 +188,10 @@ const Projects = ({ offSetY }) => {
 
   return (
     <div id="projects" className="projects">
-      {/* <div className="project-header-container">
-        <h1> PROJECTS </h1>
-      </div> */}
       <SectionHeader title="Projects" />
       <Segment basic compact className="project-container">
         <div className="card-group">{renderCards()}</div>
       </Segment>
-      {/* <img className="branch" src={branch} style={{ transform: `translateY(${offSetY * 0.1}px)` }}></img> */}
-      {/* <img
-        className="birdNaplesYellow"
-        src={birdNaplesYellow}
-        style={{ transform: `translateY(${offSetY * 0.2}px)` }}
-      ></img>
-      <img
-        className="birdMelon"
-        src={birdMelon}
-        style={{ transform: `translateX(${offSetY * 0.7}px)` }}
-      ></img> */}
-      {/* <div className="tree-line"></div> */}
       {renderModal()}
     </div>
   );
