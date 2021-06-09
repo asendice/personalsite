@@ -40,9 +40,11 @@ const Info = () => {
   const renderImagesRow = (newArr) => {
     return newArr.map((img) => {
       return (
-        <Table.Cell collapsing textAlign="center">
-          <Image className="skill-image" src={img.pic} />
-          <span style={{ color: "#fff" }}>{img.name}</span>
+        <Table.Cell>
+          <div style={{margin: "auto"}}>
+            <Image className="skill-image" src={img.pic} />
+            <span style={{ color: "#fff" }}>{img.name}</span>
+          </div>
         </Table.Cell>
       );
     });
@@ -119,7 +121,23 @@ const Info = () => {
               textAlign="center"
             >
               <h1>Current Technical Skills:</h1>
-              <Table
+              <Segment fluid basic>
+                <Table textAlign="center" basic unstackable>
+                  <Table.Body>
+                    <Table.Row>{renderImagesRow(skills.slice(0, 3))}</Table.Row>
+                    <Table.Row>
+                      {" "}
+                      {renderImagesRow(skills.slice(3, 6))}
+                    </Table.Row>
+                    <Table.Row>{renderImagesRow(skills.slice(6, 9))}</Table.Row>
+                    <Table.Row>
+                      {renderImagesRow(skills.slice(9, 12))}
+                    </Table.Row>
+                    <Table.Row> {renderImagesRow(skills.slice(12))}</Table.Row>
+                  </Table.Body>
+                </Table>
+              </Segment>
+              {/* <Table
                 basic="very"
                 compact
                 collapsing
@@ -133,7 +151,7 @@ const Info = () => {
                   <Table.Row>{renderImagesRow(skills.slice(9, 12))}</Table.Row>
                   <Table.Row>{renderImagesRow(skills.slice(12))}</Table.Row>
                 </Table.Body>
-              </Table>
+              </Table> */}
             </Segment>
           </Grid.Column>
         </Grid.Row>

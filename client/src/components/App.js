@@ -48,7 +48,9 @@ const App = () => {
           </div>
         </div>
       </div>
-
+      <div style={{width: "100%, height: 100px", backgroundColor: "#00162b", position: "absolute"}}>
+        WHERE AM I 
+      </div>
       <div className="section-two">
         <Projects />
         <Info offSetY={offSetY} />

@@ -27,7 +27,7 @@ const Title = ({ offSetY }) => {
           className="title-buttons"
         />
       </Link>
-      <div className="social-container" style={{ transform: `translateY(${offSetY * -0.2}px)` }}>
+      <div className="social-container" style={{ transform: `translateX(${offSetY * -0.2}px)` }}>
       <a
           href="https://www.linkedin.com/in/dylan-travis-2716a4205/"
           rel="noopener noreferrer"

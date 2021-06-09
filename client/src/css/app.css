@@ -218,6 +218,7 @@
   .carousel-image {
     height: 300px !important;
   }
+  
 }
 
 .tech-skills {
@@ -232,7 +233,10 @@
   margin: auto !important;
 }
 
-@media screen and (max-width: 413px) {
+@media screen and (max-width: 499px) {
+  .title {
+    margin-top: 200px !important;
+  }
 }
 
 .cards {
@@ -272,6 +276,8 @@
 .footer-container {
   background-color: #000000 !important;
   margin: 0 !important;
+  border-radius: 0 !important;
+  border: black solid 1px;
 }
 
 .footer-icons {
