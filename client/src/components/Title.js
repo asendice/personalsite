@@ -5,12 +5,12 @@ import { Link } from "react-scroll";
 const Title = ({ offSetY }) => {
   return (
     <Segment basic textAlign="center" className="title">
-      <Header style={{ transform: `translateX(${offSetY * -0.6}px)` }} as="h1">
+      <Header style={{ transform: `translateY(${offSetY * -0.6}px)` }} as="h1">
         Dylan Travis front-end web developer
       </Header>
       <Link to="projects" spy={true} smooth={true} duration={2000}>
         <Button
-          style={{ transform: `translateX(${offSetY * -0.3}px)` }}
+          style={{ transform: `translateY(${offSetY * -0.3}px)` }}
           circular
           content="Projects"
           size="large"
@@ -20,14 +20,14 @@ const Title = ({ offSetY }) => {
 
       <Link to="info" spy={true} smooth={true} duration={2000}>
         <Button
-          style={{ transform: `translateX(${offSetY * -0.3}px)` }}
+          style={{ transform: `translateY(${offSetY * -0.3}px)` }}
           circular
           content="Info"
           size="large"
           className="title-buttons"
         />
       </Link>
-      <div className="social-container" style={{ transform: `translateX(${offSetY * -0.2}px)` }}>
+      <div className="social-container" style={{ transform: `translateY(${offSetY * -0.2}px)` }}>
       <a
           href="https://www.linkedin.com/in/dylan-travis-2716a4205/"
           rel="noopener noreferrer"

@@ -137,26 +137,11 @@ const Info = () => {
                   </Table.Body>
                 </Table>
               </Segment>
-              {/* <Table
-                basic="very"
-                compact
-                collapsing
-                unstackable
-                columns={3}
-              >
-                <Table.Body>
-                  <Table.Row>{renderImagesRow(skills.slice(0, 3))}</Table.Row>
-                  <Table.Row>{renderImagesRow(skills.slice(3, 6))}</Table.Row>
-                  <Table.Row>{renderImagesRow(skills.slice(6, 9))}</Table.Row>
-                  <Table.Row>{renderImagesRow(skills.slice(9, 12))}</Table.Row>
-                  <Table.Row>{renderImagesRow(skills.slice(12))}</Table.Row>
-                </Table.Body>
-              </Table> */}
             </Segment>
           </Grid.Column>
         </Grid.Row>
-        <Grid.Row>
-          <Segment textAlign="center" basic className="tech-skills">
+        <Grid.Row >
+          <Segment textAlign="center" basic className="contact-me">
             <h1>Contact Me</h1>
             <a
               href="mailto:dylantravisdev@gmail.com?subject=We are interested in hiring you!"

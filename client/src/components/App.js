@@ -48,8 +48,7 @@ const App = () => {
           </div>
         </div>
       </div>
-      <div style={{width: "100%, height: 100px", backgroundColor: "#00162b", position: "absolute"}}>
-        WHERE AM I 
+      <div style={{width: "100%, minHeight: 300px", marginTop: "-10px", backgroundColor: "#00000", position: "absolute", zIndex: "5"}}>
       </div>
       <div className="section-two">
         <Projects />

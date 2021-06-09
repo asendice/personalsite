@@ -6,6 +6,11 @@
   overscroll-behavior-x: none !important;
 }
 
+body,
+html {
+  position: relative;
+}
+
 .section-one {
   padding: 0;
   margin: 0;
@@ -65,13 +70,14 @@
   height: 100% !important;
   width: 100% !important;
   position: absolute;
+  background-color: #00162b;
   z-index: 2 !important;
   -webkit-transform: translate3d(0, 0, 0);
 }
 
 .arrows {
-  margin-left: 40px !important;
-  margin-right: 40px !important;
+  margin-left: 10px !important;
+  margin-right: 10px !important;
   cursor: pointer !important;
   color: grey !important;
   opacity: 0.4 !important;
@@ -108,6 +114,9 @@
 }
 @media screen and (max-width: 1200px) {
   .info {
+    height: auto !important;
+  }
+  .projects {
     height: auto !important;
   }
 }
@@ -218,11 +227,18 @@
   .carousel-image {
     height: 300px !important;
   }
-  
+  .contact-me {
+    margin-top: 0px !important;
+  }
 }
 
 .tech-skills {
   margin-top: 50px !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+.contact-me {
+  margin-top: -50px !important;
   margin-left: auto !important;
   margin-right: auto !important;
 }
@@ -237,6 +253,7 @@
   .title {
     margin-top: 200px !important;
   }
+ 
 }
 
 .cards {
@@ -288,7 +305,7 @@
 }
 
 .social-container {
-  margin-top: 5% !important;
+  margin-top: 2% !important;
 }
 
 .footer-icons:hover {
