@@ -10,19 +10,19 @@ const authRoutes = require("./routes/auth");
 //app
 const app = express();
 
-const whitelist = ["http://localhost:3000", "http://localhost:8000", "https://dylantravisportfolio.herokuapp.com"];
+const whitelist = ["http://localhost:3000", "https://dylantravisportfolio.herokuapp.com/api"];
 const corsOptions = {
   origin: function (origin, callback) {
-    console.log("** Origin of request" + origin)
-    if(whitelist.indexOf(origin) !== -1 || !origin){
-      console.log("Origin Acceptable")
-      callback(null, true)
-    }else{
-      console.log("Origin Rejected")
-      callback(new Error("Not allowed by CORS"))
+    console.log("** Origin of request " + origin);
+    if (whitelist.indexOf(origin) !== -1 || !origin) {
+      console.log("Origin acceptable");
+      callback(null, true);
+    } else {
+      console.log("Origin rejected");
+      callback(!new Error("Not allowed by CORS "));
     }
-  } 
-}
+  },
+};
 //db
 mongoose
   .connect(process.env.DATABASE, {
@@ -38,12 +38,19 @@ app.use(cors(corsOptions));
 
 app.use("/api", authRoutes);
 
-if (process.env.Node_ENV === "production") {
-  app.use(express.static(path.join(__dirname, "client/build")));
-  app.get("*", function (req, res) {
-    res.sendFile(path.join(__dirname, "client/build", "index.html"));
+// need for production
+if (process.env.NODE_ENV === "production") {
+  app.use(express.static(path.join(__dirname, "/client/build")));
+
+  app.get("*", (req, res) => {
+    res.sendFile(path.join(__dirname, "client", "build", "index.html"));
+  });
+} else {
+  app.get("/", (req, res) => {
+    res.send("Api running");
   });
 }
+
 
 const port = process.env.PORT;
 
