@@ -10,7 +10,7 @@ const Title = ({ offSetY }) => {
       </Header>
       <Link to="projects" spy={true} smooth={true} duration={2000}>
         <Button
-          style={{ transform: `translateX(${offSetY * 0.6}px)` }}
+          // style={{ transform: `translateY(${offSetY * -0.2}px)` }}
           circular
           content="Projects"
           size="large"
@@ -20,7 +20,7 @@ const Title = ({ offSetY }) => {
 
       <Link to="info" spy={true} smooth={true} duration={2000}>
         <Button
-          style={{ transform: `translateX(${offSetY * 0.6}px)` }}
+          // style={{ transform: `translateY(${offSetY * -0.2}px)` }}
           circular
           content="Info"
           size="large"

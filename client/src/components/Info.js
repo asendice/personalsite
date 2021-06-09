@@ -5,8 +5,9 @@ import { Grid, Segment, Image, Table } from "semantic-ui-react";
 
 const Info = () => {
   const [skills, setSkills] = useState([]);
+  const [width, setWidth] = useState(0);
 
-  console.log(skills, "skills");
+  console.log(width, "width");
 
   const getSkills = async () => {
     await backendApi
@@ -26,14 +27,20 @@ const Info = () => {
       .then((response) => setSkills(response.data.message));
   };
 
+  const handleResize = () => {
+    setWidth(window.innerWidth);
+  };
+
   useEffect(() => {
     getSkills();
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
   }, []);
 
   const renderImagesRow = (newArr) => {
     return newArr.map((img) => {
       return (
-        <Table.Cell textAlign="center">
+        <Table.Cell collapsing textAlign="center">
           <Image className="skill-image" src={img.pic} />
           <span style={{ color: "#fff" }}>{img.name}</span>
         </Table.Cell>
@@ -112,11 +119,19 @@ const Info = () => {
               textAlign="center"
             >
               <h1>Current Technical Skills:</h1>
-              <Table basic="very" compact collapsing unstackable>
+              <Table
+                basic="very"
+                compact
+                collapsing
+                unstackable
+                columns={3}
+              >
                 <Table.Body>
-                  <Table.Row>{renderImagesRow(skills.slice(0, 5))}</Table.Row>
-                  <Table.Row>{renderImagesRow(skills.slice(5, 10))}</Table.Row>
-                  <Table.Row>{renderImagesRow(skills.slice(10))}</Table.Row>
+                  <Table.Row>{renderImagesRow(skills.slice(0, 3))}</Table.Row>
+                  <Table.Row>{renderImagesRow(skills.slice(3, 6))}</Table.Row>
+                  <Table.Row>{renderImagesRow(skills.slice(6, 9))}</Table.Row>
+                  <Table.Row>{renderImagesRow(skills.slice(9, 12))}</Table.Row>
+                  <Table.Row>{renderImagesRow(skills.slice(12))}</Table.Row>
                 </Table.Body>
               </Table>
             </Segment>
