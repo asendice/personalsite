@@ -3,7 +3,7 @@ import SectionHeader from "./SectionHeader";
 import backendApi from "../apis/backendApi";
 import { Grid, Segment, Image, Table } from "semantic-ui-react";
 
-const Info = ({ offSetY }) => {
+const Info = () => {
   const [skills, setSkills] = useState([]);
 
   console.log(skills, "skills");

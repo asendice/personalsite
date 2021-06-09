@@ -12,7 +12,7 @@ import {
 import SectionHeader from "./SectionHeader";
 import backendApi from "../apis/backendApi";
 
-const Projects = ({ offSetY }) => {
+const Projects = () => {
   const [proj, setProj] = useState([]);
   const [selectedProj, setSelectedProj] = useState({});
   const [open, setOpen] = useState(false);
