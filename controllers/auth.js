@@ -2,6 +2,7 @@ const Project = require("../models/Project");
 const Skill = require("../models/Skill");
 const AboutMe = require("../models/AboutMe");
 
+// get and return all projects
 exports.getProjects = (req, res) => {
   Project.find().then((proj) => {
     if (!proj) {
@@ -16,6 +17,7 @@ exports.getProjects = (req, res) => {
     }
   });
 };
+//get and return all skills 
 exports.getSkills = (req, res) => {
   Skill.find().then((skill) => {
     if (!skill) {
@@ -30,6 +32,8 @@ exports.getSkills = (req, res) => {
     }
   });
 };
+
+//get and return about me
 exports.getAboutMe = (req, res) => {
   AboutMe.find().then((txt) => {
     if (!txt) {

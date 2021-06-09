@@ -7,10 +7,22 @@ require("dotenv").config();
 // //import Routes
 const authRoutes = require("./routes/auth");
 
-
 //app
 const app = express();
 
+const whitelist = ["http://localhost:3000", "http://localhost:8000"];
+const corsOptions = {
+  origin: function (origin, callback) {
+    console.log("** Origin of request" + origin)
+    if(whitelist.indexOf(origin) !== -1 || !origin){
+      console.log("Origin Acceptable")
+      callback(null, true)
+    }else{
+      console.log("Origin Rejected")
+      callback(new Error("Not allowed by CORS"))
+    }
+  } 
+}
 //db
 mongoose
   .connect(process.env.DATABASE, {
@@ -22,9 +34,16 @@ mongoose
 
 //middleware
 app.use(express.json());
-app.use(cors());
+app.use(cors(corsOptions));
 
 app.use("/api", authRoutes);
+
+if (process.env.Node_ENV === "production") {
+  app.use(express.static(path.join(__dirname, "client/build")));
+  app.get("*", function (req, res) {
+    res.sendFile(path.join(__dirname, "client/build", "index.html"));
+  });
+}
 
 const port = process.env.PORT;
 
