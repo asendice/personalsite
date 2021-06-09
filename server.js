@@ -10,7 +10,7 @@ const authRoutes = require("./routes/auth");
 //app
 const app = express();
 
-const whitelist = ["http://localhost:3000", "http://localhost:8000"];
+const whitelist = ["http://localhost:3000", "http://localhost:8000", "https://dylantravisportfolio.herokuapp.com"];
 const corsOptions = {
   origin: function (origin, callback) {
     console.log("** Origin of request" + origin)
