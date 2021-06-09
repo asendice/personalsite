@@ -10,19 +10,19 @@ const authRoutes = require("./routes/auth");
 //app
 const app = express();
 
-const whitelist = ["http://localhost:3000", "https://dylantravisportfolio.herokuapp.com/api"];
-const corsOptions = {
-  origin: function (origin, callback) {
-    console.log("** Origin of request " + origin);
-    if (whitelist.indexOf(origin) !== -1 || !origin) {
-      console.log("Origin acceptable");
-      callback(null, true);
-    } else {
-      console.log("Origin rejected");
-      callback(!new Error("Not allowed by CORS "));
-    }
-  },
-};
+const whitelist = ["http://localhost:3000", "http://localhost:8000", "https://dylantravisportfolio.herokuapp.com/api"];
+// const corsOptions = {
+//   origin: function (origin, callback) {
+//     console.log("** Origin of request " + origin);
+//     if (whitelist.indexOf(origin) !== -1 || !origin) {
+//       console.log("Origin acceptable");
+//       callback(null, true);
+//     } else {
+//       console.log("Origin rejected");
+//       callback(!new Error("Not allowed by CORS "));
+//     }
+//   },
+// };
 //db
 mongoose
   .connect(process.env.DATABASE, {
@@ -34,7 +34,7 @@ mongoose
 
 //middleware
 app.use(express.json());
-app.use(cors(corsOptions));
+app.use(cors());
 
 app.use("/api", authRoutes);
 
