@@ -21,7 +21,7 @@ const Footer = () => {
           <Icon className="footer-icons" size="huge" name="github" />
         </a>
         <a
-          href="mailto:dylan.travis23@outlook.com?subject=We are interested in hiring you!"
+          href="https://dtravmysite.s3.us-west-1.amazonaws.com/Dylan_Travis_-_Web_Developer.pdf"
           rel="noopener noreferrer"
           target="_blank"
         >

@@ -10,7 +10,7 @@ const Title = ({ offSetY }) => {
       </Header>
       <Link to="projects" spy={true} smooth={true} duration={2000}>
         <Button
-          // style={{ transform: `translateY(${offSetY * -0.2}px)` }}
+          style={{ transform: `translateX(${offSetY * -0.3}px)` }}
           circular
           content="Projects"
           size="large"
@@ -20,7 +20,7 @@ const Title = ({ offSetY }) => {
 
       <Link to="info" spy={true} smooth={true} duration={2000}>
         <Button
-          // style={{ transform: `translateY(${offSetY * -0.2}px)` }}
+          style={{ transform: `translateX(${offSetY * -0.3}px)` }}
           circular
           content="Info"
           size="large"
@@ -43,7 +43,7 @@ const Title = ({ offSetY }) => {
           <Icon className="title-icons" size="huge" name="github" />
         </a>
         <a
-          href="mailto:dylan.travis23@outlook.com?subject=We are interested in hiring you!"
+          href="https://dtravmysite.s3.us-west-1.amazonaws.com/Dylan_Travis_-_Web_Developer.pdf"
           rel="noopener noreferrer"
           target="_blank"
         >
