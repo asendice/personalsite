@@ -8,17 +8,19 @@ import Info from "./Info";
 const App = () => {
   const [offSetY, setOffSetY] = useState(0);
 
+  // when called sets the state offSetY to to window.pageYOffset
   const handleScroll = () => {
     setOffSetY(window.pageYOffset);
   };
 
+  // scroll event listener to trigger handle scroll
   useEffect(() => {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   });
 
   return (
-    <div style={{display: "inlineBlock"}}>
+    <div style={{ display: "inlineBlock" }}>
       <div id="main" className="section-one">
         <div className="bkg"></div>
         <div
@@ -44,11 +46,9 @@ const App = () => {
 
         <div className="sixth">
           <div style={{ transform: `translateY(${offSetY * 0.1}px)` }}>
-            <Title offSetY={offSetY} />
           </div>
         </div>
       </div>
-      <div className="hidden-div">WHERE AM I</div>
       <div className="section-two">
         <Projects />
         <Info offSetY={offSetY} />

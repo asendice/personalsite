@@ -72,16 +72,7 @@ body {
   z-index: 2 !important;
   -webkit-transform: translate3d(0, 0, 0);
 }
-.hidden-div {
-  height: 100% !important;
-  width: 100vw !important;
-  margin-top: -1px !important;
-  margin-bottom: -1px !important;
-  position: relative;
-  background-color: #00162b;
-  z-index: 2 !important;
-  -webkit-transform: translate3d(0, 0, 0);
-}
+
 
 .arrows {
   margin-left: 10px !important;

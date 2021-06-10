@@ -7,7 +7,6 @@ const Info = () => {
   const [skills, setSkills] = useState([]);
   const [width, setWidth] = useState(0);
 
-  console.log(width, "width");
 
   const getSkills = async () => {
     await backendApi
