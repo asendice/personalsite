@@ -6,16 +6,11 @@
   overscroll-behavior-x: none !important;
 }
 
-body,
-html {
-  position: relative;
-}
 
 .section-one {
   padding: 0;
   margin: 0;
   height: 100vh;
-  background: #38c5ee;
   width: 100%;
 }
 .title {
@@ -67,6 +62,14 @@ html {
 }
 
 .section-two {
+  height: 100% !important;
+  width: 100% !important;;
+  position: absolute;
+  background-color: #00162b;
+  z-index: 2 !important;
+  -webkit-transform: translate3d(0, 0, 0);
+}
+.hidden-div {
   height: 100% !important;
   width: 100% !important;;
   position: absolute;
@@ -187,6 +190,7 @@ html {
 }
 
 .project-header-container {
+  
   padding: 0 !important;
   margin-top: 150px !important;
   display: flex !important;

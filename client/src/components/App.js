@@ -18,7 +18,7 @@ const App = () => {
   });
 
   return (
-    <>
+    <div style={{display: "inlineBlock"}}>
       <div id="main" className="section-one">
         <div className="bkg"></div>
         <div
@@ -50,12 +50,13 @@ const App = () => {
       </div>
       <div style={{width: "100%, minHeight: 300px", marginTop: "-10px", backgroundColor: "#00000", position: "absolute", zIndex: "5"}}>
       </div>
+      <div className="hidden-div">WHERE AM I</div>
       <div className="section-two">
         <Projects />
         <Info offSetY={offSetY} />
         <Footer />
       </div>
-    </>
+    </div>
   );
 };
 
