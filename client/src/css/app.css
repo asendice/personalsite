@@ -68,8 +68,7 @@ html {
 
 .section-two {
   height: 100% !important;
-  width: 100% !important;
-  margin-top: 0 !important;
+  width: 100% !important;;
   position: absolute;
   background-color: #00162b;
   z-index: 2 !important;
