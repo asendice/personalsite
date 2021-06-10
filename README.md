@@ -8,12 +8,12 @@ This effect was created using a landscape SVG image I found on Shutterstock.com.
 the image into layers. Then created <div> tags for every layer and set CSS properties:
 
 ```
-background-url(_path to image_);
-height: 100%;
-width: 100%;
-position: absolute;
-z-index: 2;
-background-size: 100% 100%;
+ background-url(/pathToImage);
+ height: 100%;
+ width: 100%;
+ position: absolute;
+ z-index: 2;
+ background-size: 100% 100%;
 ```
 
 Utilizing react and an event listener "scroll", I was able to set state equal to the number of pixels the document is
@@ -32,7 +32,7 @@ currently scrolled along the vertical axis.
   });
 ```
 
-Finally using transform: translateY(stateOfYAxis \* num)px to move the layers around.
+Finally using CSS property transform to move the layers accordingly.
 
 ```
 <div
