@@ -85,4 +85,6 @@ express version: 4.17.1
 
 ## Links
 
-https://github.com/asendice https://www.linkedin.com/in/dylan-travis-2716a4205/ https://dylantravisportfolio.herokuapp.com/
+https://github.com/asendice,
+https://www.linkedin.com/in/dylan-travis-2716a4205/,
+https://dylantravisportfolio.herokuapp.com/
