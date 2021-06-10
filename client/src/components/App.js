@@ -20,7 +20,7 @@ const App = () => {
   });
 
   return (
-    <div style={{ display: "inlineBlock" }}>
+    <div>
       <div id="main" className="section-one">
         <div className="bkg"></div>
         <div
@@ -46,6 +46,7 @@ const App = () => {
 
         <div className="sixth">
           <div style={{ transform: `translateY(${offSetY * 0.1}px)` }}>
+            <Title offSetY={offSetY} />
           </div>
         </div>
       </div>

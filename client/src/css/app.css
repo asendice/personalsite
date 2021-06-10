@@ -15,6 +15,7 @@ body {
   margin: 0;
   height: 100vh;
   width: 100%;
+  position: relative;
 }
 .title {
   border: none !important;
@@ -73,7 +74,6 @@ body {
   -webkit-transform: translate3d(0, 0, 0);
 }
 
-
 .arrows {
   margin-left: 10px !important;
   margin-right: 10px !important;
@@ -124,8 +124,8 @@ body {
   background-image: url(../img/bkg.png);
   background-size: 100% 100%;
   width: 100vw;
-  position: fixed;
-  height: 100%;
+  position: absolute;
+  height: 100vh;
 }
 
 .skySun {
