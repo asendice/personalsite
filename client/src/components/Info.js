@@ -7,7 +7,6 @@ const Info = () => {
   const [skills, setSkills] = useState([]);
   const [width, setWidth] = useState(0);
 
-
   const getSkills = async () => {
     await backendApi
       .get("/skills")
@@ -70,18 +69,18 @@ const Info = () => {
                 . Thank you for visiting my portfolio site. I developed a
                 passion for coding in early 2017. Python was the first
                 programming language that I decided to learn and ever since then
-                I have been hooked. I attended a coding bootcamp{" "}
+                I have been hooked. I attended{" "}
                 <a
                   href="https://www.nucamp.co/community/"
                   rel="noopener noreferrer"
                   target="_blank"
                   className="links"
                 >
-                  NucampCo
+                  NuCampCo's{" "}
                 </a>{" "}
-                in 2019 and early 2020 and received two certificates of
-                completion from their Web Development Fundamentals Course
-                (HTML/CSS/JS/Bootstrap) and their{" "}
+                coding bootcamp in 2019 and early 2020 and received a
+                certificate of completion from their Web Development
+                Fundamentals Course (HTML/CSS/JS/Bootstrap) and their{" "}
                 <a
                   href="https://dtravmysite.s3-us-west-1.amazonaws.com/Front_End_Certificate_Dylan.pdf"
                   rel="noopener noreferrer"
@@ -93,11 +92,10 @@ const Info = () => {
                 (React/React-Native/Redux/SCSS). My favorite part about
                 developing web applications is the process between, being faced
                 with a problem I may not directly know how to solve and arriving
-                at a solution for that problem. I will uniquely bring value to
-                your team, with my background as a store manager. I have strong
-                communication, leadership, and time management skills that will
-                accelerate any learning curve and help your team achieve
-                deadlines. If you would like to work with me, please call or{" "}
+                at a solution for that problem. I have strong communication,
+                leadership, and time management skills that will accelerate any
+                learning curve and help your team achieve deadlines. If you
+                would like to work with me, please call or{" "}
                 <a
                   href="mailto:dylantravisdev@gmail.com?subject=We are interested in hiring you!"
                   rel="noopener noreferrer"

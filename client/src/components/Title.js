@@ -6,7 +6,7 @@ const Title = ({ offSetY }) => {
   return (
     <Segment basic textAlign="center" className="title">
       <Header style={{ transform: `translateY(${offSetY * -0.6}px)` }} as="h1">
-        Dylan Travis front-end web developer
+        Dylan Travis Web Developer
       </Header>
       <Link to="projects" spy={true} smooth={true} duration={2000}>
         <Button
