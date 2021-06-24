@@ -38,7 +38,7 @@ const Info = () => {
   const renderImagesRow = (newArr) => {
     return newArr.map((img) => {
       return (
-        <Table.Cell>
+        <Table.Cell style={{border: "none"}}>
           <div style={{ margin: "auto" }}>
             <Image className="skill-image" src={img.pic} />
             <span style={{ color: "grey" }}>{img.name}</span>
@@ -119,14 +119,23 @@ const Info = () => {
             >
               <h1>Current Technical Skills:</h1>
               <Segment fluid basic>
-                <Table textAlign="center" basic unstackable>
+                <Table
+                  textAlign="center"
+                  basic
+                  unstackable
+                  style={{ border: "none" }}
+                >
                   <Table.Body>
-                    <Table.Row>{renderImagesRow(skills.slice(0, 5))}</Table.Row>
+                    <Table.Row style={{ border: "none" }}>
+                      {renderImagesRow(skills.slice(0, 5))}
+                    </Table.Row>
                     <Table.Row>
                       {" "}
                       {renderImagesRow(skills.slice(5, 10))}
                     </Table.Row>
-                    <Table.Row>{renderImagesRow(skills.slice(10))}</Table.Row>
+                    <Table.Row style={{ border: "none" }}>
+                      {renderImagesRow(skills.slice(10))}
+                    </Table.Row>
                   </Table.Body>
                 </Table>
               </Segment>
