@@ -100,16 +100,9 @@ body {
   margin-top: 0px !important;
   width: 100%;
   min-height: 100vh !important;
-  background-image: linear-gradient(
-    to bottom,
-    #00162b,
-    #100f21,
-    #100713,
-    #0e030a,
-    #000000
-  ) !important;
+  background-color: #00162b;
   border-top: #00162b 1px solid !important;
-  border-bottom: #000000 1px solid !important;
+  border-bottom: #00162b 1px solid !important;
 }
 @media screen and (max-width: 1200px) {
   .info {
@@ -291,10 +284,10 @@ body {
 }
 
 .footer-container {
-  background-color: #000000 !important;
+  background-color: #00162b !important;
   margin: 0 !important;
   border-radius: 0 !important;
-  border: black solid 1px;
+  border: #00162b solid 1px !important;
 }
 
 .footer-icons {
